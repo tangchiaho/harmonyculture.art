@@ -1,22 +1,28 @@
-/* 和聲文化 Harmony Culture — 文化機構風格 */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&display=swap");
+/* 和聲文化 Harmony Culture — 基金會／文化團體風格 */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;600&display=swap");
 
 :root {
-  --color-bg: #ffffff;
-  --color-bg-light: #f5f5f5;
-  --color-text: #222222;
-  --color-text-secondary: #333333;
-  --color-border: #e8e8e8;
-  --font-primary: "Inter", "Noto Sans TC", sans-serif;
+  --color-bg: #fafaf8;
+  --color-bg-warm: #f2f1ed;
+  --color-bg-footer: #2d2a26;
+  --color-text: #1c1c1b;
+  --color-text-secondary: #4a4845;
+  --color-text-muted: #6b6966;
+  --color-accent: #3d5a5a;
+  --color-accent-hover: #2d4545;
+  --color-border: #e5e3df;
+  --color-footer-text: #c9c7c3;
   --font-sans: "Noto Sans TC", "Inter", sans-serif;
+  --font-serif: "Noto Serif TC", "Noto Sans TC", serif;
+  --font-primary: "Inter", "Noto Sans TC", sans-serif;
   --space-xs: 0.5rem;
   --space-s: 1.25rem;
   --space-m: 2.5rem;
   --space-l: 5rem;
   --space-xl: 7rem;
-  --space-2xl: 12rem;
+  --space-2xl: 11rem;
   --max-width: 1100px;
-  --line-height: 1.75;
+  --line-height: 1.8;
 }
 
 *,
@@ -33,17 +39,18 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-primary);
+  font-family: var(--font-sans);
   font-weight: 400;
   line-height: var(--line-height);
   color: var(--color-text);
   background: var(--color-bg);
+  overflow-x: hidden;
 }
 
-/* Layout — centered, max-width 1100px */
+/* Header — 明確區塊、主色點綴 */
 .site-header {
-  padding: var(--space-l) 0;
-  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-m) 0 var(--space-l);
+  border-bottom: 2px solid var(--color-accent);
   background: var(--color-bg);
 }
 
@@ -63,93 +70,117 @@ body {
   text-decoration: none;
   font-size: 0.9375rem;
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 .site-nav a:hover {
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
+/* Main — 首屏標題區更有份量 */
 main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--space-2xl) var(--space-m);
 }
 
-/* Typography — elegant, minimal */
+/* 首頁標題區：襯線＋底線裝飾 */
+.intro-block {
+  padding-bottom: var(--space-l);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-l);
+}
+
 .page-title {
-  font-family: var(--font-sans);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw, 3rem);
   font-weight: 600;
   margin: 0 0 var(--space-s);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   color: var(--color-text);
+}
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  margin-top: var(--space-s);
 }
 
 .page-subtitle {
   font-family: var(--font-primary);
   font-size: 1rem;
   font-weight: 400;
+  color: var(--color-text-muted);
+  margin: var(--space-m) 0 0;
+  letter-spacing: 0.06em;
+}
+
+.lead {
+  font-size: 1.125rem;
   color: var(--color-text-secondary);
-  margin: 0 0 var(--space-xl);
-  letter-spacing: 0.04em;
+  max-width: 40rem;
+  margin-top: var(--space-s);
+  font-weight: 500;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-h2 {
-  font-size: 1.25rem;
-  margin: var(--space-xl) 0 var(--space-s);
-}
-
+/* 內文 */
 p {
   margin: 0 0 var(--space-m);
   color: var(--color-text);
 }
 
-.lead {
-  font-size: 1.0625rem;
-  color: var(--color-text-secondary);
-  max-width: 42rem;
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text);
 }
 
-/* Sections — light background option, large spacing */
+h2 {
+  font-size: 1.3125rem;
+  margin: var(--space-xl) 0 var(--space-s);
+  letter-spacing: 0.02em;
+}
+
+/* Sections — 暖灰底＋左側主色條 */
 .section {
   margin-top: var(--space-xl);
-  padding-top: var(--space-l);
-  padding-bottom: var(--space-l);
-  padding-left: 0;
-  padding-right: 0;
-  border-top: 1px solid var(--color-border);
+  padding: var(--space-l) 0 var(--space-l) var(--space-m);
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-bg-warm);
+  margin-left: calc(-1 * var(--space-m));
+  margin-right: calc(-1 * var(--space-m));
+  padding-left: calc(var(--space-m) + 0.25rem);
 }
 
 .section-title {
+  font-family: var(--font-sans);
   font-size: 0.8125rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-text-secondary);
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
   margin: 0 0 var(--space-s);
 }
 
 .founder-name {
-  font-family: var(--font-sans);
-  font-size: 1.375rem;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 var(--space-xs);
   color: var(--color-text);
+  letter-spacing: 0.02em;
 }
 
 .founder-name-en {
   font-family: var(--font-primary);
   font-size: 1rem;
   font-weight: 400;
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
   margin: 0 0 var(--space-s);
+  letter-spacing: 0.04em;
 }
 
 .founder-role {
@@ -158,26 +189,32 @@ p {
   margin: 0 0 var(--space-s);
 }
 
-/* Light background section block */
-.section-light {
-  background: var(--color-bg-light);
-  margin-left: calc(-1 * var(--space-m));
-  margin-right: calc(-1 * var(--space-m));
+/* 其他頁面的 section 若不需要整塊灰底，可用 */
+.section-plain {
+  margin-left: 0;
+  margin-right: 0;
   padding-left: var(--space-m);
-  padding-right: var(--space-m);
-  padding-top: var(--space-l);
-  padding-bottom: var(--space-l);
+  background: transparent;
+  border-left: 3px solid var(--color-accent);
 }
 
-/* Footer — clean grid, light background */
+/* Footer — 深色底，基金會常見 */
 .site-footer {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--space-xl) var(--space-m);
-  border-top: 1px solid var(--color-border);
-  background: var(--color-bg-light);
+  background: var(--color-bg-footer);
   font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  color: var(--color-footer-text);
+}
+
+.site-footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--color-accent);
+  margin-bottom: var(--space-l);
 }
 
 .footer-nav {
@@ -189,44 +226,59 @@ p {
 }
 
 .footer-nav a {
-  color: var(--color-text-secondary);
+  color: var(--color-footer-text);
   text-decoration: none;
   font-weight: 500;
 }
 
 .footer-nav a:hover {
-  color: var(--color-text);
+  color: #fff;
 }
 
 .company-info {
   padding-top: var(--space-m);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .company-info .company-name {
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: var(--space-xs);
-  color: var(--color-text);
+  color: #fff;
+  font-size: 0.9375rem;
 }
 
 .company-info p {
   margin: 0 0 var(--space-xs);
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  color: var(--color-footer-text);
+  line-height: 1.6;
 }
 
 .site-footer a {
-  color: var(--color-text-secondary);
+  color: var(--color-footer-text);
   text-decoration: none;
 }
 
 .site-footer a:hover {
-  color: var(--color-text);
+  color: #fff;
 }
 
-/* Contact page company block */
+/* 聯絡頁公司區塊 */
+.company-block {
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-bg-warm);
+  margin-left: calc(-1 * var(--space-m));
+  margin-right: calc(-1 * var(--space-m));
+  padding: var(--space-l) var(--space-m);
+  padding-left: calc(var(--space-m) + 0.25rem);
+}
+
+.company-block .section-title {
+  margin-top: 0;
+}
+
 .company-block .company-name {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 var(--space-s);
@@ -244,14 +296,37 @@ p {
 }
 
 .contact-list a {
-  color: var(--color-text);
+  color: var(--color-accent);
   text-decoration: none;
+  font-weight: 500;
 }
 
 .contact-list a:hover {
-  color: var(--color-text-secondary);
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* 全站連結主色 */
+main a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+main a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
 }
 
 /* Utilities */
 .mt-xl { margin-top: var(--space-xl); }
 .mb-0 { margin-bottom: 0; }
+
+/* 非首頁的標題區（無 intro-block 時） */
+main:not(.home) .page-title::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--color-accent);
+  margin-top: var(--space-s);
+}

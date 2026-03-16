@@ -1,48 +1,100 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>文化合作 — 和聲文化 Harmony Culture</title>
-  <meta name="description" content="和聲文化歡迎與藝文團體、教育單位及地方組織進行文化合作，共同推動文化與創意。">
+  <meta name="description" content="和聲文化與藝文團體、教育機構、企業品牌及地方組織展開文化合作，涵蓋活動共辦、教育分享、品牌文化企劃與地方文化計畫。">
+  <meta name="keywords" content="和聲文化, Harmony Culture, 文化合作, 文化活動, 品牌文化, 地方創生, 社區文化, 藝術教育">
+  <meta property="og:title" content="文化合作 — 和聲文化 Harmony Culture">
+  <meta property="og:description" content="和聲文化與藝文團體、教育機構、企業品牌及地方組織展開文化合作。">
+  <meta property="og:url" content="https://www.harmonyculture.art/collaboration.html">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://www.harmonyculture.art/collaboration.html">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="inner">
-      <nav class="site-nav">
-        <a href="index.html">首頁</a>
-        <a href="about.html">關於和聲文化</a>
-        <a href="collaboration.html">文化合作</a>
-        <a href="initiatives.html">文化參與</a>
-        <a href="contact.html">聯絡</a>
-      </nav>
-    </div>
-  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="nav-logo">Harmony Culture <span>和聲文化</span></a>
+    <button class="nav-toggle" aria-label="開啟選單" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="about.html">關於</a></li>
+      <li><a href="collaboration.html" class="active">文化合作</a></li>
+      <li><a href="initiatives.html">文化參與</a></li>
+      <li><a href="contact.html">聯絡</a></li>
+    </ul>
+  </nav>
 
   <main>
-    <h1 class="page-title">文化合作</h1>
-    <p class="page-subtitle">Collaboration</p>
-    <div class="content">
-      <p class="lead">我們樂於與藝文團體、教育單位、地方組織及創作者展開合作。</p>
-      <p>合作形式包括活動共辦、教育分享、策展與企劃支援，以及跨領域文化專案。若您有合作構想，歡迎透過聯絡頁面與我們聯繫。</p>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+      <p class="eyebrow">Collaboration</p>
+      <h1>文化合作</h1>
+      <p class="en-title">Cultural Collaboration</p>
+      <p class="hero-desc">
+        和聲文化樂於與不同類型的夥伴展開合作，包括藝文團體、教育機構、企業品牌、地方組織與創作者。若您有合作構想，歡迎與我們聯繫。
+      </p>
     </div>
+
+    <!-- Collaboration Types -->
+    <section class="content-section">
+      <p class="section-label">Ways to Collaborate</p>
+      <div class="collab-grid">
+
+        <div class="collab-item">
+          <h3>文化活動共辦</h3>
+          <p>包含音樂季、文化論壇、演出及展覽策劃等活動的共同籌辦與資源支持，協助將文化活動從構想落地執行。</p>
+        </div>
+
+        <div class="collab-item">
+          <h3>教育與論壇合作</h3>
+          <p>與學校、研究機構或社會組織合作，共同推動文化教育講座、數位音樂工作坊與知識分享活動，促進文化知識的傳遞與交流。</p>
+        </div>
+
+        <div class="collab-item">
+          <h3>品牌文化合作</h3>
+          <p>協助企業與品牌進行具有文化深度的主題企劃，包含品牌主題音樂製作、文化活動贊助與品牌形象的文化連結。</p>
+        </div>
+
+        <div class="collab-item">
+          <h3>地方文化計畫</h3>
+          <p>參與地方創生、社區文化活化、偏鄉藝術教育與原住民文化相關計畫，以文化為媒介深化地方連結與社會參與。</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="content-section">
+      <div class="section-body">
+        <p>如果您的組織、品牌或計畫與以上方向有所交集，歡迎透過聯絡頁面與我們說明您的構想。</p>
+        <a href="contact.html" class="cta-link">聯絡我們</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="inner">
-      <nav class="footer-nav">
-        <a href="index.html">首頁</a>
-        <a href="about.html">關於和聲文化</a>
-        <a href="collaboration.html">文化合作</a>
-        <a href="initiatives.html">文化參與</a>
-        <a href="contact.html">聯絡</a>
-      </nav>
-      <div class="company-info">
-        <p class="company-name">和聲文化音樂股份有限公司 Harmony Culture Co., Ltd.</p>
-        <p>統一編號：94145253 · 電話：04-36032036 · <a href="mailto:contact@harmonyculture.art">contact@harmonyculture.art</a> · 網站：<a href="https://www.harmonyculture.art">www.harmonyculture.art</a></p>
-      </div>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">Harmony Culture</div>
+    <div class="footer-meta">
+      和聲文化音樂股份有限公司 Harmony Culture Co., Ltd.<br>
+      統一編號：94145253 &nbsp;·&nbsp; 04-36032036 &nbsp;·&nbsp;
+      <a href="mailto:contact@harmonyculture.art">contact@harmonyculture.art</a>
     </div>
   </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+
 </body>
 </html>

@@ -335,11 +335,11 @@ main {
 
 .founder-photo-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  border: 1px solid var(--light-gray);
-  box-shadow: 0 2px 16px rgba(176, 138, 94, 0.10);
-  background: var(--off-white);
+  border: none;
+  box-shadow: none;
+  background: transparent;
 }
 
 .founder-photo {
@@ -685,13 +685,13 @@ footer {
   }
 
   .founder-left {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 16px;
   }
 
   .founder-photo-wrap {
-    width: 100px;
+    width: 160px;
     flex-shrink: 0;
   }
 
@@ -713,10 +713,15 @@ footer {
     padding: 32px 24px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 12px;
   }
 
   .footer-meta {
     text-align: left;
+    font-size: 0.68rem;
+  }
+
+  .footer-meta .footer-hide-mobile {
+    display: none;
   }
 }
